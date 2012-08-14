@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				74EC076715DACF45004A284D /* README.md */,
-				74EC06DB15DAC75E004A284D /* ServiceBox */,
-				74EC06F015DAC75E004A284D /* ServiceBoxTests */,
+				74EC06DB15DAC75E004A284D /* APServiceBox */,
+				74EC06F015DAC75E004A284D /* APServiceBoxTests */,
 				74EC06D815DAC75D004A284D /* Frameworks */,
 				74EC06D715DAC75D004A284D /* Products */,
 			);
@@ -111,14 +111,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		74EC06DB15DAC75E004A284D /* ServiceBox */ = {
+		74EC06DB15DAC75E004A284D /* APServiceBox */ = {
 			isa = PBXGroup;
 			children = (
 				74EC070C15DAC807004A284D /* APServiceBox.h */,
 				74EC070D15DAC807004A284D /* APServiceBox.m */,
 				74EC06DC15DAC75E004A284D /* Supporting Files */,
 			);
-			path = ServiceBox;
+			path = APServiceBox;
 			sourceTree = "<group>";
 		};
 		74EC06DC15DAC75E004A284D /* Supporting Files */ = {
@@ -129,14 +129,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		74EC06F015DAC75E004A284D /* ServiceBoxTests */ = {
+		74EC06F015DAC75E004A284D /* APServiceBoxTests */ = {
 			isa = PBXGroup;
 			children = (
 				74EC070115DAC7E8004A284D /* TestCases */,
 				74EC070415DAC7E8004A284D /* TestClasses */,
 				74EC06F115DAC75E004A284D /* Supporting Files */,
 			);
-			path = ServiceBoxTests;
+			path = APServiceBoxTests;
 			sourceTree = "<group>";
 		};
 		74EC06F115DAC75E004A284D /* Supporting Files */ = {
@@ -354,7 +354,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ServiceBox.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
+				GCC_PREFIX_HEADER = "APServiceBox/APServiceBox-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = APServiceBox;
 				SKIP_INSTALL = YES;
@@ -366,7 +366,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ServiceBox.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
+				GCC_PREFIX_HEADER = "APServiceBox/APServiceBox-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = APServiceBox;
 				SKIP_INSTALL = YES;
@@ -381,8 +381,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
-				INFOPLIST_FILE = "ServiceBoxTests/APServiceBoxTests-Info.plist";
+				GCC_PREFIX_HEADER = "APServiceBox/APServiceBox-Prefix.pch";
+				INFOPLIST_FILE = "APServiceBoxTests/APServiceBoxTests-Info.plist";
 				PRODUCT_NAME = APServiceBoxTests;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -396,8 +396,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
-				INFOPLIST_FILE = "ServiceBoxTests/APServiceBoxTests-Info.plist";
+				GCC_PREFIX_HEADER = "APServiceBox/APServiceBox-Prefix.pch";
+				INFOPLIST_FILE = "APServiceBoxTests/APServiceBoxTests-Info.plist";
 				PRODUCT_NAME = APServiceBoxTests;
 				WRAPPER_EXTENSION = octest;
 			};
