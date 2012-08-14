@@ -34,12 +34,12 @@ static char *get_prop_type(objc_property_t property) {
 - (id)init
 {
     self = [super init];
-
+    
     if (self) {
         _dependencies = [[NSMutableDictionary alloc] initWithCapacity:5];
         [_dependencies setObject:self forKey:@"serviceBox"];
     }
-
+    
     return self;
 }
 
@@ -52,7 +52,7 @@ static char *get_prop_type(objc_property_t property) {
 {
     if ([propType characterAtIndex:0] == '<') {
         // Matching against a protocol
-
+        
         NSString *protocolName = [propType substringWithRange:NSMakeRange(1, propType.length - 2)];
         Protocol *protocol = NSProtocolFromString(protocolName);
         return [dependency.class conformsToProtocol:protocol];
@@ -66,16 +66,17 @@ static char *get_prop_type(objc_property_t property) {
 
 - (void)injectInto:(NSObject *)target property:(char const *)property dependency:(NSObject *)dependency
 {
-// Capitalize the first letter of the propName
+    // Capitalize the first letter of the propName
     char uppercaseProp[strlen(property) + 1];
     strcpy(uppercaseProp, property);
     uppercaseProp[0] += 'A' - 'a';
-
+    
     NSString *selName = [NSString stringWithFormat:@"set%s:", uppercaseProp];
     SEL setter = NSSelectorFromString(selName);
     if ([target respondsToSelector:setter]) {
-                            [target performSelector:setter withObject:dependency];
-                        }
+        // The warning that comes here can be safely ignored, as nothing should be returned from a setter
+        [target performSelector:setter withObject:dependency];
+    }
 }
 
 - (void)injectInto:(NSObject *)target forClass:(Class)class
@@ -85,12 +86,12 @@ static char *get_prop_type(objc_property_t property) {
     for(i = 0; i < outCount; i++) {
         objc_property_t property = properties[i];
         const char *propName = property_getName(property);
-
+        
         if(propName) {
             // Lookup the dependency
             NSString *propertyName = [NSString stringWithCString:propName encoding:NSUTF8StringEncoding];
             NSObject *dependency = [_dependencies objectForKey:propertyName];
-
+            
             if (dependency != nil) {
                 char *propType = get_prop_type(property);
                 NSString *propertyType = [NSString stringWithCString:propType encoding:NSUTF8StringEncoding];
