@@ -29,7 +29,7 @@ APServiceBox *box = [[APServiceBox alloc] init];
 [box fill:myViewController];
 
 // For example, if myViewController has a property defined as follow:
-@property (...) AnalyticsService
+@property (...) AnalyticsService *analyticsService;
 // then the analyticsService from above will be injected.
 ```
 
