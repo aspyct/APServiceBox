@@ -72,6 +72,7 @@ Name's Antoine.
 -   You can reach me by mail: a.dotreppe@aspyct.org
 -   Or via twitter: @aspyct
 -   Or drop a ticket on the issue tracker here.
+-   Visit [my website](http://www.aspyct.org), aspyct.org
 
 License & Author
 ----------------
