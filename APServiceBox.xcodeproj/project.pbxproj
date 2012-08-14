@@ -379,7 +379,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/ServiceBox-Prefix.pch";
+				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
 				INFOPLIST_FILE = "ServiceBoxTests/APServiceBoxTests-Info.plist";
 				PRODUCT_NAME = APServiceBoxTests;
 				WRAPPER_EXTENSION = octest;
@@ -394,7 +394,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/ServiceBox-Prefix.pch";
+				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
 				INFOPLIST_FILE = "ServiceBoxTests/APServiceBoxTests-Info.plist";
 				PRODUCT_NAME = APServiceBoxTests;
 				WRAPPER_EXTENSION = octest;
