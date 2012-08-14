@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		74EC06DA15DAC75E004A284D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D915DAC75D004A284D /* Foundation.framework */; };
-		74EC06DF15DAC75E004A284D /* ServiceBox.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74EC06DE15DAC75E004A284D /* ServiceBox.h */; };
-		74EC06E115DAC75E004A284D /* ServiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC06E015DAC75E004A284D /* ServiceBox.m */; };
 		74EC06E915DAC75E004A284D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06E815DAC75E004A284D /* SenTestingKit.framework */; };
 		74EC06EB15DAC75E004A284D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06EA15DAC75E004A284D /* UIKit.framework */; };
 		74EC06EC15DAC75E004A284D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D915DAC75D004A284D /* Foundation.framework */; };
 		74EC06EF15DAC75E004A284D /* libServiceBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D615DAC75D004A284D /* libServiceBox.a */; };
 		74EC06F515DAC75E004A284D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EC06F315DAC75E004A284D /* InfoPlist.strings */; };
-		74EC06F815DAC75E004A284D /* ServiceBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC06F715DAC75E004A284D /* ServiceBoxTests.m */; };
+		74EC070915DAC7E8004A284D /* APServiceBoxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070315DAC7E8004A284D /* APServiceBoxTest.m */; };
+		74EC070A15DAC7E8004A284D /* Injectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070615DAC7E8004A284D /* Injectable.m */; };
+		74EC070B15DAC7E8004A284D /* InjectableSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070815DAC7E8004A284D /* InjectableSubclass.m */; };
+		74EC070E15DAC807004A284D /* APServiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070D15DAC807004A284D /* APServiceBox.m */; };
+		74EC070F15DAC807004A284D /* APServiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070D15DAC807004A284D /* APServiceBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				74EC06DF15DAC75E004A284D /* ServiceBox.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,15 +46,19 @@
 		74EC06D615DAC75D004A284D /* libServiceBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServiceBox.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC06D915DAC75D004A284D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74EC06DD15DAC75E004A284D /* ServiceBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ServiceBox-Prefix.pch"; sourceTree = "<group>"; };
-		74EC06DE15DAC75E004A284D /* ServiceBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceBox.h; sourceTree = "<group>"; };
-		74EC06E015DAC75E004A284D /* ServiceBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceBox.m; sourceTree = "<group>"; };
 		74EC06E715DAC75E004A284D /* ServiceBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC06E815DAC75E004A284D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		74EC06EA15DAC75E004A284D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		74EC06F215DAC75E004A284D /* ServiceBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ServiceBoxTests-Info.plist"; sourceTree = "<group>"; };
 		74EC06F415DAC75E004A284D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		74EC06F615DAC75E004A284D /* ServiceBoxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceBoxTests.h; sourceTree = "<group>"; };
-		74EC06F715DAC75E004A284D /* ServiceBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceBoxTests.m; sourceTree = "<group>"; };
+		74EC070215DAC7E8004A284D /* APServiceBoxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APServiceBoxTest.h; sourceTree = "<group>"; };
+		74EC070315DAC7E8004A284D /* APServiceBoxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APServiceBoxTest.m; sourceTree = "<group>"; };
+		74EC070515DAC7E8004A284D /* Injectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Injectable.h; sourceTree = "<group>"; };
+		74EC070615DAC7E8004A284D /* Injectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Injectable.m; sourceTree = "<group>"; };
+		74EC070715DAC7E8004A284D /* InjectableSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InjectableSubclass.h; sourceTree = "<group>"; };
+		74EC070815DAC7E8004A284D /* InjectableSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InjectableSubclass.m; sourceTree = "<group>"; };
+		74EC070C15DAC807004A284D /* APServiceBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APServiceBox.h; sourceTree = "<group>"; };
+		74EC070D15DAC807004A284D /* APServiceBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APServiceBox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +116,8 @@
 		74EC06DB15DAC75E004A284D /* ServiceBox */ = {
 			isa = PBXGroup;
 			children = (
-				74EC06DE15DAC75E004A284D /* ServiceBox.h */,
-				74EC06E015DAC75E004A284D /* ServiceBox.m */,
+				74EC070C15DAC807004A284D /* APServiceBox.h */,
+				74EC070D15DAC807004A284D /* APServiceBox.m */,
 				74EC06DC15DAC75E004A284D /* Supporting Files */,
 			);
 			path = ServiceBox;
@@ -129,8 +134,8 @@
 		74EC06F015DAC75E004A284D /* ServiceBoxTests */ = {
 			isa = PBXGroup;
 			children = (
-				74EC06F615DAC75E004A284D /* ServiceBoxTests.h */,
-				74EC06F715DAC75E004A284D /* ServiceBoxTests.m */,
+				74EC070115DAC7E8004A284D /* TestCases */,
+				74EC070415DAC7E8004A284D /* TestClasses */,
 				74EC06F115DAC75E004A284D /* Supporting Files */,
 			);
 			path = ServiceBoxTests;
@@ -143,6 +148,26 @@
 				74EC06F315DAC75E004A284D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74EC070115DAC7E8004A284D /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				74EC070215DAC7E8004A284D /* APServiceBoxTest.h */,
+				74EC070315DAC7E8004A284D /* APServiceBoxTest.m */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		74EC070415DAC7E8004A284D /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				74EC070515DAC7E8004A284D /* Injectable.h */,
+				74EC070615DAC7E8004A284D /* Injectable.m */,
+				74EC070715DAC7E8004A284D /* InjectableSubclass.h */,
+				74EC070815DAC7E8004A284D /* InjectableSubclass.m */,
+			);
+			path = TestClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74EC06E115DAC75E004A284D /* ServiceBox.m in Sources */,
+				74EC070E15DAC807004A284D /* APServiceBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74EC06F815DAC75E004A284D /* ServiceBoxTests.m in Sources */,
+				74EC070915DAC7E8004A284D /* APServiceBoxTest.m in Sources */,
+				74EC070A15DAC7E8004A284D /* Injectable.m in Sources */,
+				74EC070B15DAC7E8004A284D /* InjectableSubclass.m in Sources */,
+				74EC070F15DAC807004A284D /* APServiceBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
