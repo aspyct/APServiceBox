@@ -49,10 +49,11 @@ Thus, the following two forms of properties are valid:
 
 // Will match any object that conforms to <AnalyticsService> protocol
 @property (...) id<AnalyticsService> *analyticsService;
+```
 
 ** Need more? **
 
-If you need more insights on how this works, have a look at the test file: it's short and clear!
+If you need more insights on how this works, have a look at the [test file](https://github.com/aspyct/APServiceBox/blob/master/APServiceBoxTests/TestCases/APServiceBoxTest.m): it's short and clear!
 Or contact me ;)
 
 Contact me
