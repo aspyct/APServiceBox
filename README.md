@@ -4,7 +4,7 @@ APServiceBox
 How to use
 ----------
 
-Quick & easy way: drag the two files "APServiceBox.m" and "APServiceBox.h" into your project.
+Quick & easy way: drag the two files "[APServiceBox.m](https://github.com/aspyct/APServiceBox/blob/master/APServiceBox/APServiceBox.m)" and "[APServiceBox.h](https://github.com/aspyct/APServiceBox/blob/master/APServiceBox/APServiceBox.h)" into your project.
 
 The nice way: you tell me...
 
