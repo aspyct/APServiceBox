@@ -78,6 +78,8 @@ License & Author
 ----------------
 
 Feel free to use this for commercial works, and I'd be glad to hear from you, or why not see my name in a "thanks" section :)
+
+
 This code is available under the MIT license.
 
 Hope you like this little utility. Have fun!
