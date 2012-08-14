@@ -56,6 +56,10 @@ Thus, the following two forms of properties are valid:
 
 If you need to inject the box itself into one of the objects (typically a UIViewController that will create other UIViewControllers), you can simply add a @property of type APServiceBox and named "serviceBox".
 
+```objective-c
+@property (strong, nonatomic) APServiceBox *serviceBox;
+```
+
 **Need more?**
 
 If you need more insights on how this works, have a look at the [test file](https://github.com/aspyct/APServiceBox/blob/master/APServiceBoxTests/TestCases/APServiceBoxTest.m): it's short and clear!
