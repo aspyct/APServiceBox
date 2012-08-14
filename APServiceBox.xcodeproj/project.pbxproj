@@ -11,7 +11,7 @@
 		74EC06E915DAC75E004A284D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06E815DAC75E004A284D /* SenTestingKit.framework */; };
 		74EC06EB15DAC75E004A284D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06EA15DAC75E004A284D /* UIKit.framework */; };
 		74EC06EC15DAC75E004A284D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D915DAC75D004A284D /* Foundation.framework */; };
-		74EC06EF15DAC75E004A284D /* libServiceBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D615DAC75D004A284D /* libServiceBox.a */; };
+		74EC06EF15DAC75E004A284D /* libAPServiceBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D615DAC75D004A284D /* libAPServiceBox.a */; };
 		74EC06F515DAC75E004A284D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EC06F315DAC75E004A284D /* InfoPlist.strings */; };
 		74EC070915DAC7E8004A284D /* APServiceBoxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070315DAC7E8004A284D /* APServiceBoxTest.m */; };
 		74EC070A15DAC7E8004A284D /* Injectable.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070615DAC7E8004A284D /* Injectable.m */; };
@@ -43,13 +43,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		74EC06D615DAC75D004A284D /* libServiceBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServiceBox.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EC06D615DAC75D004A284D /* libAPServiceBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPServiceBox.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC06D915DAC75D004A284D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		74EC06DD15DAC75E004A284D /* ServiceBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ServiceBox-Prefix.pch"; sourceTree = "<group>"; };
-		74EC06E715DAC75E004A284D /* ServiceBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EC06DD15DAC75E004A284D /* APServiceBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APServiceBox-Prefix.pch"; sourceTree = "<group>"; };
+		74EC06E715DAC75E004A284D /* APServiceBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APServiceBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC06E815DAC75E004A284D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		74EC06EA15DAC75E004A284D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		74EC06F215DAC75E004A284D /* ServiceBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ServiceBoxTests-Info.plist"; sourceTree = "<group>"; };
+		74EC06F215DAC75E004A284D /* APServiceBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "APServiceBoxTests-Info.plist"; sourceTree = "<group>"; };
 		74EC06F415DAC75E004A284D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74EC070215DAC7E8004A284D /* APServiceBoxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APServiceBoxTest.h; sourceTree = "<group>"; };
 		74EC070315DAC7E8004A284D /* APServiceBoxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APServiceBoxTest.m; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				74EC06E915DAC75E004A284D /* SenTestingKit.framework in Frameworks */,
 				74EC06EB15DAC75E004A284D /* UIKit.framework in Frameworks */,
 				74EC06EC15DAC75E004A284D /* Foundation.framework in Frameworks */,
-				74EC06EF15DAC75E004A284D /* libServiceBox.a in Frameworks */,
+				74EC06EF15DAC75E004A284D /* libAPServiceBox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +97,8 @@
 		74EC06D715DAC75D004A284D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74EC06D615DAC75D004A284D /* libServiceBox.a */,
-				74EC06E715DAC75E004A284D /* ServiceBoxTests.octest */,
+				74EC06D615DAC75D004A284D /* libAPServiceBox.a */,
+				74EC06E715DAC75E004A284D /* APServiceBoxTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 		74EC06DC15DAC75E004A284D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				74EC06DD15DAC75E004A284D /* ServiceBox-Prefix.pch */,
+				74EC06DD15DAC75E004A284D /* APServiceBox-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 		74EC06F115DAC75E004A284D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				74EC06F215DAC75E004A284D /* ServiceBoxTests-Info.plist */,
+				74EC06F215DAC75E004A284D /* APServiceBoxTests-Info.plist */,
 				74EC06F315DAC75E004A284D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -173,9 +173,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74EC06D515DAC75D004A284D /* ServiceBox */ = {
+		74EC06D515DAC75D004A284D /* APServiceBox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74EC06FB15DAC75E004A284D /* Build configuration list for PBXNativeTarget "ServiceBox" */;
+			buildConfigurationList = 74EC06FB15DAC75E004A284D /* Build configuration list for PBXNativeTarget "APServiceBox" */;
 			buildPhases = (
 				74EC06D215DAC75D004A284D /* Sources */,
 				74EC06D315DAC75D004A284D /* Frameworks */,
@@ -185,14 +185,14 @@
 			);
 			dependencies = (
 			);
-			name = ServiceBox;
+			name = APServiceBox;
 			productName = ServiceBox;
-			productReference = 74EC06D615DAC75D004A284D /* libServiceBox.a */;
+			productReference = 74EC06D615DAC75D004A284D /* libAPServiceBox.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		74EC06E615DAC75E004A284D /* ServiceBoxTests */ = {
+		74EC06E615DAC75E004A284D /* APServiceBoxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74EC06FE15DAC75E004A284D /* Build configuration list for PBXNativeTarget "ServiceBoxTests" */;
+			buildConfigurationList = 74EC06FE15DAC75E004A284D /* Build configuration list for PBXNativeTarget "APServiceBoxTests" */;
 			buildPhases = (
 				74EC06E215DAC75E004A284D /* Sources */,
 				74EC06E315DAC75E004A284D /* Frameworks */,
@@ -204,9 +204,9 @@
 			dependencies = (
 				74EC06EE15DAC75E004A284D /* PBXTargetDependency */,
 			);
-			name = ServiceBoxTests;
+			name = APServiceBoxTests;
 			productName = ServiceBoxTests;
-			productReference = 74EC06E715DAC75E004A284D /* ServiceBoxTests.octest */;
+			productReference = 74EC06E715DAC75E004A284D /* APServiceBoxTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +218,7 @@
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Antoine d'Otreppe";
 			};
-			buildConfigurationList = 74EC06D015DAC75D004A284D /* Build configuration list for PBXProject "ServiceBox" */;
+			buildConfigurationList = 74EC06D015DAC75D004A284D /* Build configuration list for PBXProject "APServiceBox" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74EC06D515DAC75D004A284D /* ServiceBox */,
-				74EC06E615DAC75E004A284D /* ServiceBoxTests */,
+				74EC06D515DAC75D004A284D /* APServiceBox */,
+				74EC06E615DAC75E004A284D /* APServiceBoxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +288,7 @@
 /* Begin PBXTargetDependency section */
 		74EC06EE15DAC75E004A284D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74EC06D515DAC75D004A284D /* ServiceBox */;
+			target = 74EC06D515DAC75D004A284D /* APServiceBox */;
 			targetProxy = 74EC06ED15DAC75E004A284D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -356,9 +356,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/ServiceBox.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/ServiceBox-Prefix.pch";
+				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = APServiceBox;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -368,9 +368,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/ServiceBox.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ServiceBox/ServiceBox-Prefix.pch";
+				GCC_PREFIX_HEADER = "ServiceBox/APServiceBox-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = APServiceBox;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -384,8 +384,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ServiceBox/ServiceBox-Prefix.pch";
-				INFOPLIST_FILE = "ServiceBoxTests/ServiceBoxTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ServiceBoxTests/APServiceBoxTests-Info.plist";
+				PRODUCT_NAME = APServiceBoxTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -399,8 +399,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ServiceBox/ServiceBox-Prefix.pch";
-				INFOPLIST_FILE = "ServiceBoxTests/ServiceBoxTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ServiceBoxTests/APServiceBoxTests-Info.plist";
+				PRODUCT_NAME = APServiceBoxTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -408,7 +408,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74EC06D015DAC75D004A284D /* Build configuration list for PBXProject "ServiceBox" */ = {
+		74EC06D015DAC75D004A284D /* Build configuration list for PBXProject "APServiceBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74EC06F915DAC75E004A284D /* Debug */,
@@ -417,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74EC06FB15DAC75E004A284D /* Build configuration list for PBXNativeTarget "ServiceBox" */ = {
+		74EC06FB15DAC75E004A284D /* Build configuration list for PBXNativeTarget "APServiceBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74EC06FC15DAC75E004A284D /* Debug */,
@@ -425,7 +425,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		74EC06FE15DAC75E004A284D /* Build configuration list for PBXNativeTarget "ServiceBoxTests" */ = {
+		74EC06FE15DAC75E004A284D /* Build configuration list for PBXNativeTarget "APServiceBoxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74EC06FF15DAC75E004A284D /* Debug */,
