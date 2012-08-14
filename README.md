@@ -36,11 +36,11 @@ APServiceBox *box = [[APServiceBox alloc] init];
 **Injection conditions**
 
 There are two conditions for a dependency to be injected:
-1. the @property name corresponds to the name given when registering the service
-2. the @property type matches the registered service, that is (one of the following):
-    - service.class == @property.class
-    - [service isKindOfClass:@property.class]
-    - [service.class conformsToProtocol:@property.protocol]
+1.  the @property name corresponds to the name given when registering the service
+2.  the @property type matches the registered service, that is (one of the following):
+    -   service.class == @property.class
+    -   [service isKindOfClass:@property.class]
+    -   [service.class conformsToProtocol:@property.protocol]
     
 Thus, the following two forms of properties are valid:
 ```objective-c
