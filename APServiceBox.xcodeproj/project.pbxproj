@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		74EC06DA15DAC75E004A284D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D915DAC75D004A284D /* Foundation.framework */; };
 		74EC06E915DAC75E004A284D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06E815DAC75E004A284D /* SenTestingKit.framework */; };
-		74EC06EB15DAC75E004A284D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06EA15DAC75E004A284D /* UIKit.framework */; };
 		74EC06EC15DAC75E004A284D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D915DAC75D004A284D /* Foundation.framework */; };
 		74EC06EF15DAC75E004A284D /* libAPServiceBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D615DAC75D004A284D /* libAPServiceBox.a */; };
 		74EC06F515DAC75E004A284D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EC06F315DAC75E004A284D /* InfoPlist.strings */; };
@@ -48,7 +47,6 @@
 		74EC06DD15DAC75E004A284D /* APServiceBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APServiceBox-Prefix.pch"; sourceTree = "<group>"; };
 		74EC06E715DAC75E004A284D /* APServiceBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APServiceBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC06E815DAC75E004A284D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		74EC06EA15DAC75E004A284D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		74EC06F215DAC75E004A284D /* APServiceBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "APServiceBoxTests-Info.plist"; sourceTree = "<group>"; };
 		74EC06F415DAC75E004A284D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74EC070215DAC7E8004A284D /* APServiceBoxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APServiceBoxTest.h; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				74EC06E915DAC75E004A284D /* SenTestingKit.framework in Frameworks */,
-				74EC06EB15DAC75E004A284D /* UIKit.framework in Frameworks */,
 				74EC06EC15DAC75E004A284D /* Foundation.framework in Frameworks */,
 				74EC06EF15DAC75E004A284D /* libAPServiceBox.a in Frameworks */,
 			);
@@ -108,7 +105,6 @@
 			children = (
 				74EC06D915DAC75D004A284D /* Foundation.framework */,
 				74EC06E815DAC75E004A284D /* SenTestingKit.framework */,
-				74EC06EA15DAC75E004A284D /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
