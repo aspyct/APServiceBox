@@ -57,6 +57,7 @@
 		74EC070815DAC7E8004A284D /* InjectableSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InjectableSubclass.m; sourceTree = "<group>"; };
 		74EC070C15DAC807004A284D /* APServiceBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APServiceBox.h; sourceTree = "<group>"; };
 		74EC070D15DAC807004A284D /* APServiceBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APServiceBox.m; sourceTree = "<group>"; };
+		74EC076715DACF45004A284D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		74EC06CB15DAC75D004A284D = {
 			isa = PBXGroup;
 			children = (
+				74EC076715DACF45004A284D /* README.md */,
 				74EC06DB15DAC75E004A284D /* ServiceBox */,
 				74EC06F015DAC75E004A284D /* ServiceBoxTests */,
 				74EC06D815DAC75D004A284D /* Frameworks */,
@@ -420,6 +422,7 @@
 				74EC06FD15DAC75E004A284D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EC06FE15DAC75E004A284D /* Build configuration list for PBXNativeTarget "APServiceBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +431,7 @@
 				74EC070015DAC75E004A284D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
