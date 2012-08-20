@@ -14,19 +14,29 @@
 
 static char *get_prop_type(objc_property_t property) {
     const char *attributes = property_getAttributes(property);
-    int attr_len = strlen(attributes);
-    char buffer[1 + attr_len];
-    strcpy(buffer, attributes);
+    const char *start;
+    int len = strlen(attributes);
     
-    // Had a bug lately, keep this in place...
-    buffer[attr_len] = '\0';
-    char *state = buffer, *attribute;
-    while ((attribute = strsep(&state, ",")) != NULL) {
-        if (attribute[0] == 'T') {
-            return (char *)[[NSData dataWithBytes:(attribute + 3) length:strlen(attribute) - 4] bytes];
+    // Ok, let's get over it
+    if (len >= 3 && attributes[0] == 'T' && attributes[1] == '@' && attributes[2] == '"') {
+        // Find the ','
+        start = attributes + 3;
+        char *end = strchr(start, '"');
+        
+        if (end) {
+            char *type = malloc((end - start) * sizeof(char) + 1);
+            strncpy(type, start, end - start);
+            type[end - start] = '\0';
+            
+            return type;
+        }
+        else {
+            return "";
         }
     }
-    return "@";
+    else {
+        return "";
+    }
 }
 
 @implementation APServiceBox {
