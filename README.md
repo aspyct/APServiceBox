@@ -60,6 +60,36 @@ If you need to inject the box itself into one of the objects (typically a UIView
 @property (strong, nonatomic) APServiceBox *serviceBox;
 ```
 
+**Cross-dependency injection**
+
+When you call `fill:` for the first time, APServiceBox will scan and fill each of the registered dependencies. This allows the following scenario:
+
+```objective-c StorageManager
+@interface StorageManager
+
+@end
+```
+
+```objective-c PreferenceManager
+@interface PreferenceManager
+
+@property (strong, nonatomic) StorageManager *storageManager;
+
+@end
+```
+
+```objective-c Usage example
+APServiceBox *box = [[APServiceBox alloc] init];
+[box registerDependency:preferenceManger as:@"preferenceManager"];
+[box registerDependency:storageManger as:@"storageManager"];
+
+// And if you invoke...
+[box fill:myObject];
+
+// ...then the following is true:
+preferenceManager.storageManager == storageManager;
+```
+
 **Need more?**
 
 If you need more insights on how this works, have a look at the [test file](https://github.com/aspyct/APServiceBox/blob/master/APServiceBoxTests/TestCases/APServiceBoxTest.m): it's short and clear!
