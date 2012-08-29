@@ -10,6 +10,7 @@
 #import "APServiceBox.h"
 #import "Injectable.h"
 #import "InjectableSubclass.h"
+#import "Target.h"
 
 @implementation APServiceBoxTest {
     APServiceBox *_box;
@@ -92,6 +93,17 @@
     [_box fill:injectable];
 
     STAssertEquals(injectable, injectable.synthesized, @"The injection must work with superclasses.");
+}
+
+- (void)testAlsoFillsDependencies
+{
+    Target *target = [[Target alloc] init];
+    Injectable *injectable = [[Injectable alloc] init];
+    [_box registerDependency:target as:@"nothing"];
+    [_box registerDependency:injectable as:@"injectable"];
+    
+    [_box fill:injectable];
+    STAssertNotNil(target.injectable, @"Must inject the dependencies into each other");
 }
 
 @end

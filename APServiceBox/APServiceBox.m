@@ -41,6 +41,7 @@ static char *get_prop_type(objc_property_t property) {
 
 @implementation APServiceBox {
     NSMutableDictionary *_dependencies;
+    BOOL _initialized;
 }
 
 - (id)init
@@ -50,6 +51,7 @@ static char *get_prop_type(objc_property_t property) {
     if (self) {
         _dependencies = [[NSMutableDictionary alloc] initWithCapacity:5];
         [_dependencies setObject:self forKey:@"serviceBox"];
+        _initialized = NO;
     }
     
     return self;
@@ -118,6 +120,8 @@ static char *get_prop_type(objc_property_t property) {
 
 - (int)fill:(NSObject *)target
 {
+    [self initialize];
+    
     Class class = target.class;
     do {
         [self injectInto:target forClass:class];
@@ -125,6 +129,24 @@ static char *get_prop_type(objc_property_t property) {
     } while (class != nil);
     
     return 0;
+}
+
+- (void)initialize
+{
+    @synchronized(self) {
+        if (_initialized) {
+            return;
+        }
+        else {
+            _initialized = YES;
+        }
+    }
+    
+    NSEnumerator *enumerator = [_dependencies objectEnumerator];
+    // Inject the dependencies into the other ones
+    for (NSObject *dependency in enumerator) {
+        [self fill:dependency];
+    }
 }
 
 @end

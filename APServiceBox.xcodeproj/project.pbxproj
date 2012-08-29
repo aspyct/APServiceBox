@@ -17,6 +17,7 @@
 		74EC070B15DAC7E8004A284D /* InjectableSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070815DAC7E8004A284D /* InjectableSubclass.m */; };
 		74EC070E15DAC807004A284D /* APServiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070D15DAC807004A284D /* APServiceBox.m */; };
 		74EC070F15DAC807004A284D /* APServiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC070D15DAC807004A284D /* APServiceBox.m */; };
+		CB7EEF3A15EE469D008CCEB1 /* Target.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EEF3915EE469D008CCEB1 /* Target.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		74EC070C15DAC807004A284D /* APServiceBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APServiceBox.h; sourceTree = "<group>"; };
 		74EC070D15DAC807004A284D /* APServiceBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APServiceBox.m; sourceTree = "<group>"; };
 		74EC076715DACF45004A284D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		CB7EEF3815EE469D008CCEB1 /* Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target.h; sourceTree = "<group>"; };
+		CB7EEF3915EE469D008CCEB1 /* Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				74EC070615DAC7E8004A284D /* Injectable.m */,
 				74EC070715DAC7E8004A284D /* InjectableSubclass.h */,
 				74EC070815DAC7E8004A284D /* InjectableSubclass.m */,
+				CB7EEF3815EE469D008CCEB1 /* Target.h */,
+				CB7EEF3915EE469D008CCEB1 /* Target.m */,
 			);
 			path = TestClasses;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				74EC070A15DAC7E8004A284D /* Injectable.m in Sources */,
 				74EC070B15DAC7E8004A284D /* InjectableSubclass.m in Sources */,
 				74EC070F15DAC807004A284D /* APServiceBox.m in Sources */,
+				CB7EEF3A15EE469D008CCEB1 /* Target.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
