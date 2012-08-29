@@ -64,13 +64,13 @@ If you need to inject the box itself into one of the objects (typically a UIView
 
 When you call `fill:` for the first time, APServiceBox will scan and fill each of the registered dependencies. This allows the following scenario:
 
-```objective-c StorageManager
+```objective-c
 @interface StorageManager
 
 @end
 ```
 
-```objective-c PreferenceManager
+```objective-c
 @interface PreferenceManager
 
 @property (strong, nonatomic) StorageManager *storageManager;
@@ -78,7 +78,7 @@ When you call `fill:` for the first time, APServiceBox will scan and fill each o
 @end
 ```
 
-```objective-c Usage example
+```objective-c
 APServiceBox *box = [[APServiceBox alloc] init];
 [box registerDependency:preferenceManger as:@"preferenceManager"];
 [box registerDependency:storageManger as:@"storageManager"];
