@@ -30,7 +30,7 @@ APServiceBox *myBox = [[APServiceBox alloc] init];
 **Self-injection**
 The easiest way to inject dependencies is to call the `fillWithDependencies` method in the `init` of an object. This will use the default service box to fill the current object.
 
-```objective-c Self-injecting class example
+```objective-c
 @interface MyViewController
 @property (strong, nonatomic) AnalyticsService *analyticsService;
 @end
