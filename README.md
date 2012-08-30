@@ -54,24 +54,6 @@ The easiest way to inject dependencies is to call the `fillWithDependencies` met
 
 ```
 
-**Inject from outside the class**
-
-```objective-c
-// Create the box
-APServiceBox *box = [APServiceBox defaultBox];
-
-// Register some services in it, here a fictive AnalyticsService object
-[box registerDependency:analyticsService as:@"analyticsService"];
-
-// Use the box to inject dependencies into object's properties
-// The dependencies will be injected based on names and classes/protocols
-[box fill:myViewController];
-
-// For example, if myViewController has a property defined as follow:
-@property (...) AnalyticsService *analyticsService;
-// then the analyticsService from above will be injected.
-```
-
 **Injection conditions**
 
 There are two conditions for a dependency to be injected:
@@ -89,6 +71,24 @@ Thus, the following two forms of properties are valid:
 
 // Will match any object that conforms to <AnalyticsService> protocol
 @property (...) id<AnalyticsService> *analyticsService;
+```
+
+**Inject from outside the class**
+
+```objective-c
+// Create the box
+APServiceBox *box = [APServiceBox defaultBox];
+
+// Register some services in it, here a fictive AnalyticsService object
+[box registerDependency:analyticsService as:@"analyticsService"];
+
+// Use the box to inject dependencies into object's properties
+// The dependencies will be injected based on names and classes/protocols
+[box fill:myViewController];
+
+// For example, if myViewController has a property defined as follow:
+@property (...) AnalyticsService *analyticsService;
+// then the analyticsService from above will be injected.
 ```
 
 **Inject the box itself**
