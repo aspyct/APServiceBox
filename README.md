@@ -17,9 +17,48 @@ For example, if all your *ViewControllers need to report analytics, or depend on
 Usage example
 -------------
 
+The first thing you should do is register your services and other dependencies into the default service box.
+
+```objective-c
+AnalyticsManager *analyticsManager = [[AnalyticsManager alloc] init];
+[[APServiceBox defaultBox] registerDependency:analyticsManager as:@"analyticsManager"];
+
+// Or you can create your own box
+APServiceBox *myBox = [[APServiceBox alloc] init];
+```
+
+**Self-injection**
+The easiest way to inject dependencies is to call the `fillWithDependencies` method in the `init` of an object. This will use the default service box to fill the current object.
+
+```objective-c Self-injecting class example
+@interface MyViewController
+@property (strong, nonatomic) AnalyticsService *analyticsService;
+@end
+
+
+#import "NSObject+APServiceBox.h"
+@implementation MyViewController
+
+- (id)init {
+    self = [super init];
+    
+    if (self) {
+        // This will ask the [APServiceBox defaultBox] to provide available dependencies
+        [self fillWithDependencies];
+    }
+    
+    return self;
+}
+
+@end
+
+```
+
+**Inject from outside the class**
+
 ```objective-c
 // Create the box
-APServiceBox *box = [[APServiceBox alloc] init];
+APServiceBox *box = [APServiceBox defaultBox];
 
 // Register some services in it, here a fictive AnalyticsService object
 [box registerDependency:analyticsService as:@"analyticsService"];
