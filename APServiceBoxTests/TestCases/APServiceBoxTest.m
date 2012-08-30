@@ -11,6 +11,7 @@
 #import "Injectable.h"
 #import "InjectableSubclass.h"
 #import "Target.h"
+#import "SelfFilling.h"
 
 @implementation APServiceBoxTest {
     APServiceBox *_box;
@@ -104,6 +105,14 @@
     
     [_box fill:injectable];
     STAssertNotNil(target.injectable, @"Must inject the dependencies into each other");
+}
+
+- (void)testObjectCanRequestInjection
+{
+    [[APServiceBox defaultBox] registerDependency:[[Injectable alloc] init] as:@"injectable"];
+    SelfFilling *filling = [[SelfFilling alloc] init];
+    
+    STAssertNotNil(filling.injectable, @"Must self-inject dependencies");
 }
 
 @end

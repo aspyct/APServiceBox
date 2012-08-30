@@ -149,4 +149,17 @@ static char *get_prop_type(objc_property_t property) {
     }
 }
 
++ (APServiceBox *)defaultBox
+{
+    static APServiceBox *box = nil;
+    
+    @synchronized([APServiceBox class]) {
+        if (box == nil) {
+            box = [[APServiceBox alloc] init];
+        }
+    }
+    
+    return box;
+}
+
 @end

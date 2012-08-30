@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		749E6DBB15F025990064A8D5 /* NSObject+APServiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DBA15F025990064A8D5 /* NSObject+APServiceBox.m */; };
+		749E6DBD15F025DA0064A8D5 /* NSObject+APServiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DBA15F025990064A8D5 /* NSObject+APServiceBox.m */; };
+		749E6DC015F025ED0064A8D5 /* SelfFilling.m in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DBF15F025ED0064A8D5 /* SelfFilling.m */; };
 		74EC06DA15DAC75E004A284D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D915DAC75D004A284D /* Foundation.framework */; };
 		74EC06E915DAC75E004A284D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06E815DAC75E004A284D /* SenTestingKit.framework */; };
 		74EC06EC15DAC75E004A284D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EC06D915DAC75D004A284D /* Foundation.framework */; };
@@ -43,6 +46,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		749E6DB915F025990064A8D5 /* NSObject+APServiceBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APServiceBox.h"; sourceTree = "<group>"; };
+		749E6DBA15F025990064A8D5 /* NSObject+APServiceBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APServiceBox.m"; sourceTree = "<group>"; };
+		749E6DBE15F025ED0064A8D5 /* SelfFilling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfFilling.h; sourceTree = "<group>"; };
+		749E6DBF15F025ED0064A8D5 /* SelfFilling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfFilling.m; sourceTree = "<group>"; };
 		74EC06D615DAC75D004A284D /* libAPServiceBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPServiceBox.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC06D915DAC75D004A284D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74EC06DD15DAC75E004A284D /* APServiceBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APServiceBox-Prefix.pch"; sourceTree = "<group>"; };
@@ -117,6 +124,8 @@
 		74EC06DB15DAC75E004A284D /* APServiceBox */ = {
 			isa = PBXGroup;
 			children = (
+				749E6DB915F025990064A8D5 /* NSObject+APServiceBox.h */,
+				749E6DBA15F025990064A8D5 /* NSObject+APServiceBox.m */,
 				74EC070C15DAC807004A284D /* APServiceBox.h */,
 				74EC070D15DAC807004A284D /* APServiceBox.m */,
 				74EC06DC15DAC75E004A284D /* Supporting Files */,
@@ -169,6 +178,8 @@
 				74EC070815DAC7E8004A284D /* InjectableSubclass.m */,
 				CB7EEF3815EE469D008CCEB1 /* Target.h */,
 				CB7EEF3915EE469D008CCEB1 /* Target.m */,
+				749E6DBE15F025ED0064A8D5 /* SelfFilling.h */,
+				749E6DBF15F025ED0064A8D5 /* SelfFilling.m */,
 			);
 			path = TestClasses;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74EC070E15DAC807004A284D /* APServiceBox.m in Sources */,
+				749E6DBB15F025990064A8D5 /* NSObject+APServiceBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +296,8 @@
 				74EC070B15DAC7E8004A284D /* InjectableSubclass.m in Sources */,
 				74EC070F15DAC807004A284D /* APServiceBox.m in Sources */,
 				CB7EEF3A15EE469D008CCEB1 /* Target.m in Sources */,
+				749E6DBD15F025DA0064A8D5 /* NSObject+APServiceBox.m in Sources */,
+				749E6DC015F025ED0064A8D5 /* SelfFilling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
