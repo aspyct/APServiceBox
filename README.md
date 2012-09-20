@@ -119,8 +119,8 @@ When you call `fill:` for the first time, APServiceBox will scan and fill each o
 
 ```objective-c
 APServiceBox *box = [[APServiceBox alloc] init];
-[box registerDependency:preferenceManger as:@"preferenceManager"];
-[box registerDependency:storageManger as:@"storageManager"];
+[box registerDependency:preferenceManager as:@"preferenceManager"];
+[box registerDependency:storageManager as:@"storageManager"];
 
 // And if you invoke...
 [box fill:myObject];
