@@ -78,21 +78,6 @@ static char *get_prop_type(objc_property_t property) {
     }
 }
 
-- (void)injectInto:(NSObject *)target property:(char const *)property dependency:(NSObject *)dependency
-{
-    // Capitalize the first letter of the propName
-    char uppercaseProp[strlen(property) + 1];
-    strcpy(uppercaseProp, property);
-    uppercaseProp[0] += 'A' - 'a';
-    
-    NSString *selName = [NSString stringWithFormat:@"set%s:", uppercaseProp];
-    SEL setter = NSSelectorFromString(selName);
-    if ([target respondsToSelector:setter]) {
-        // The warning that comes here can be safely ignored, as nothing should be returned from a setter
-        [target performSelector:setter withObject:dependency];
-    }
-}
-
 - (void)injectInto:(NSObject *)target forClass:(Class)class
 {
     unsigned int outCount, i;
@@ -110,7 +95,7 @@ static char *get_prop_type(objc_property_t property) {
                 char *propType = get_prop_type(property);
                 NSString *propertyType = [NSString stringWithCString:propType encoding:NSUTF8StringEncoding];
                 if ([self propertyType:propertyType matchesWithDependency:dependency]) {
-                    [self injectInto:target property:propName dependency:dependency];
+                    [target setValue:dependency forKey:propertyName];
                 }
             }
         }

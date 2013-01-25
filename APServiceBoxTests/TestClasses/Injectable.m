@@ -12,11 +12,6 @@
     Injectable *_manual;
 }
 
-@synthesize synthesized = _synthesized;
-@synthesize serviceBox = _serviceBox;
-@synthesize readonly = _readonly;
-@synthesize proto = _proto;
-
 - (Injectable *)manual
 {
     return _manual;

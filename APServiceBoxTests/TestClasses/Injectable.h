@@ -22,6 +22,5 @@
 @property (strong, nonatomic) Injectable *manual;
 @property (strong, nonatomic) APServiceBox *serviceBox;
 @property (strong, nonatomic) id<InjectableProtocol> proto;
-@property (readonly) Injectable *readonly;
 
 @end

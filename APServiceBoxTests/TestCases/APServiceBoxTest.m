@@ -50,15 +50,6 @@
     STAssertNil(injectable.manual, @"Nothing must have been injected");
 }
 
-- (void)testSkipsReadonlyProperties
-{
-    Injectable *injectable = [[Injectable alloc] init];
-    [_box registerDependency:injectable as:@"readonly"];
-    [_box fill:injectable];
-
-    STAssertNil(injectable.readonly, @"Nothing must have been injected");
-}
-
 - (void)testInjectsItselfIfPossible
 {
     Injectable *injectable = [[Injectable alloc] init];
