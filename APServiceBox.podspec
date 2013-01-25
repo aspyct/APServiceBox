@@ -8,12 +8,12 @@
 #
 Pod::Spec.new do |s|
   s.name         = "APServiceBox"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Dependency injection for iOS / ObjC."
   s.homepage     = "http://aspyct.org/apservicebox"
   s.license      = 'MIT'
   s.author       = { "Antoine d'Otreppe" => "a.dotreppe@aspyct.org" }
-  s.source       = { :git => "https://github.com/aspyct/APServiceBox.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/aspyct/APServiceBox.git", :tag => "0.1.1" }
   s.source_files = 'Classes', 'APServiceBox/**/*.{h,m}'
   s.requires_arc = true
 end
