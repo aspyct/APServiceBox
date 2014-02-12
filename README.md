@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/aspyct/apservicebox.png?label=ready)](https://waffle.io/aspyct/apservicebox)
 APServiceBox
 ============
 
