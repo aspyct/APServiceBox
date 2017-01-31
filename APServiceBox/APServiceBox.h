@@ -13,7 +13,9 @@
 @interface APServiceBox : NSObject
 
 + (APServiceBox *)defaultBox;
+
 - (void)registerDependency:(NSObject *)dependency as:(NSString *)name;
 - (int)fill:(NSObject *)target;
+- (void)clear;
 
 @end

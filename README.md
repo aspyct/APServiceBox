@@ -29,7 +29,7 @@ APServiceBox *myBox = [[APServiceBox alloc] init];
 ```
 
 **Self-injection**
-The easiest way to inject dependencies is to call the `fillWithDependencies` method in the `init` of an object. This will use the default service box to fill the current object.
+The easiest way to inject dependencies is to call the `injectDependencies` method in the `init` of an object. This will use the default service box to fill the current object.
 
 ```objective-c
 @interface MyViewController
@@ -45,7 +45,7 @@ The easiest way to inject dependencies is to call the `fillWithDependencies` met
     
     if (self) {
         // This will ask the [APServiceBox defaultBox] to provide available dependencies
-        [self fillWithDependencies];
+        [self injectDependencies];
     }
     
     return self;

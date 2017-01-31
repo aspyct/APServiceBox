@@ -11,8 +11,14 @@
 
 @implementation NSObject (APServiceBox)
 
-- (void)fillWithDependencies {
+- (void)injectDependencies
+{
     [[APServiceBox defaultBox] fill:self];
+}
+
+- (void)fillWithDependencies
+{
+    [self injectDependencies];
 }
 
 @end

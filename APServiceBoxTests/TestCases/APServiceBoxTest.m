@@ -28,7 +28,7 @@
     [_box registerDependency:injectable as:@"manual"];
     [_box fill:injectable];
 
-    STAssertEquals(injectable, injectable.manual, @"Must be the same object");
+    XCTAssertEqual(injectable, injectable.manual, @"Must be the same object");
 }
 
 - (void)testWorksOnSynthesizedProperties
@@ -37,7 +37,7 @@
     [_box registerDependency:injectable as:@"synthesized"];
     [_box fill:injectable];
 
-    STAssertEquals(injectable, injectable.synthesized, @"Must be the same object");
+    XCTAssertEqual(injectable, injectable.synthesized, @"Must be the same object");
 }
 
 - (void)testFiltersByName
@@ -46,8 +46,8 @@
     [_box registerDependency:injectable as:@"non existing property name"];
     [_box fill:injectable];
 
-    STAssertNil(injectable.synthesized, @"Nothing must have been injected");
-    STAssertNil(injectable.manual, @"Nothing must have been injected");
+    XCTAssertNil(injectable.synthesized, @"Nothing must have been injected");
+    XCTAssertNil(injectable.manual, @"Nothing must have been injected");
 }
 
 - (void)testInjectsItselfIfPossible
@@ -55,7 +55,7 @@
     Injectable *injectable = [[Injectable alloc] init];
     [_box fill:injectable];
     
-    STAssertEquals(_box, injectable.serviceBox, @"The dependency container must inject itself as 'serviceBox'");
+    XCTAssertEqual(_box, injectable.serviceBox, @"The dependency container must inject itself as 'serviceBox'");
     NSLocalizedString(@"ie", @"ie");
 }
 
@@ -65,7 +65,7 @@
     [_box registerDependency:injectable as:@"proto"];
     [_box fill:injectable];
 
-    STAssertEquals(injectable, injectable.proto, @"id<protocol> must be injected as well.");
+    XCTAssertEqual(injectable, injectable.proto, @"id<protocol> must be injected as well.");
 }
 
 - (void)testInjectsPropertiesFromSuperclasses
@@ -75,7 +75,7 @@
     [_box registerDependency:injectable as:@"synthesized"];
     [_box fill:injected];
     
-    STAssertEquals(injectable, injected.synthesized, @"The injection must work with properties from superclasses.");
+    XCTAssertEqual(injectable, injected.synthesized, @"The injection must work with properties from superclasses.");
 }
 
 - (void)testInjectsBasedOnSuperclass
@@ -84,7 +84,7 @@
     [_box registerDependency:injectable as:@"synthesized"];
     [_box fill:injectable];
 
-    STAssertEquals(injectable, injectable.synthesized, @"The injection must work with superclasses.");
+    XCTAssertEqual(injectable, injectable.synthesized, @"The injection must work with superclasses.");
 }
 
 - (void)testAlsoFillsDependencies
@@ -95,7 +95,7 @@
     [_box registerDependency:injectable as:@"injectable"];
     
     [_box fill:injectable];
-    STAssertNotNil(target.injectable, @"Must inject the dependencies into each other");
+    XCTAssertNotNil(target.injectable, @"Must inject the dependencies into each other");
 }
 
 - (void)testObjectCanRequestInjection
@@ -103,7 +103,7 @@
     [[APServiceBox defaultBox] registerDependency:[[Injectable alloc] init] as:@"injectable"];
     SelfFilling *filling = [[SelfFilling alloc] init];
     
-    STAssertNotNil(filling.injectable, @"Must self-inject dependencies");
+    XCTAssertNotNil(filling.injectable, @"Must self-inject dependencies");
 }
 
 @end

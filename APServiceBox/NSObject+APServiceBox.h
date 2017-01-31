@@ -10,6 +10,8 @@
 
 @interface NSObject (APServiceBox)
 
-- (void)fillWithDependencies;
+- (void)injectDependencies;
+
+- (void)fillWithDependencies __deprecated_msg("Use -[NSObject injectDependencies] instead.");
 
 @end

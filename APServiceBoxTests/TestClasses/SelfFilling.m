@@ -14,11 +14,12 @@
 
 @synthesize injectable;
 
-- (id)init {
+- (id)init
+{
     self = [super init];
     
     if (self) {
-        [self fillWithDependencies];
+        [self injectDependencies];
     }
     
     return self;

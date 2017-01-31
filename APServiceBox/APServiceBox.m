@@ -12,7 +12,8 @@
 
 #import "APServiceBox.h"
 
-static char *get_prop_type(objc_property_t property) {
+static char *get_prop_type(objc_property_t property)
+{
     const char *attributes = property_getAttributes(property);
     const char *start;
     int len = strlen(attributes);
@@ -128,21 +129,29 @@ static char *get_prop_type(objc_property_t property) {
     }
     
     NSEnumerator *enumerator = [_dependencies objectEnumerator];
-    // Inject the dependencies into the other ones
+    
+    // Inject the dependencies into each other
     for (NSObject *dependency in enumerator) {
         [self fill:dependency];
+    }
+}
+
+- (void)clear
+{
+    @synchronized(self) {
+        _dependencies = [NSMutableDictionary dictionaryWithCapacity:5];
+        _initialized = NO;
     }
 }
 
 + (APServiceBox *)defaultBox
 {
     static APServiceBox *box = nil;
+    static dispatch_once_t onceToken;
     
-    @synchronized([APServiceBox class]) {
-        if (box == nil) {
-            box = [[APServiceBox alloc] init];
-        }
-    }
+    dispatch_once(&onceToken, ^{
+        box = [[APServiceBox alloc] init];
+    });
     
     return box;
 }
